@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Barra superior -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerLayout"
+            android:layout_width="393dp"
+            android:layout_height="145dp"
+            android:background="@color/Rojo"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/searchLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="VisualLintBounds">
+
+            <!-- Botón de retroceso -->
+
+            <!-- Logo de la aplicación -->
+
+            <!-- Nombre de la aplicación -->
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="67dp"
+                android:layout_height="62dp"
+                android:layout_marginTop="37dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="25dp"
+                android:background="@drawable/back_icon"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/logo"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="99dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="19dp"
+                android:layout_marginBottom="20dp"
+                android:padding="10dp"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/appName"
+                app:layout_constraintStart_toEndOf="@+id/backButton"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="116dp"
+                android:layout_height="28dp"
+                android:layout_marginStart="-40dp"
+                android:layout_marginTop="56dp"
+                android:layout_marginEnd="33dp"
+                android:layout_marginBottom="45dp"
+                android:baselineAligned="false"
+                android:text="Feria Virtual"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/logo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Otras vistas del encabezado -->
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Contenido de la pantalla -->
+
+        <!-- Barra de búsqueda -->
+        <LinearLayout
+            android:id="@+id/searchLayout"
+            android:layout_width="396dp"
+            android:layout_height="89dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/Rojo"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/menuLayout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
+
+            <EditText
+                android:id="@+id/searchEditText"
+                android:layout_width="281dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@android:color/white"
+                android:hint="Buscar locales y productos"
+                android:minHeight="48dp"
+                android:padding="8dp"
+                android:textColor="@color/white"
+                tools:ignore="Autofill,TextFields,VisualLintTextFieldSize" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="52dp"
+                android:layout_height="49dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/search_icon"
+                tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/menuLayout"
+            android:layout_width="391dp"
+            android:layout_height="56dp"
+            android:layout_marginBottom="568dp"
+            android:background="@color/Rojo"
+            android:orientation="horizontal"
+
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchLayout">
+
+            <!-- Botones del menú -->
+
+            <Button
+                android:id="@+id/tiendasButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:minHeight="48dp"
+                android:text="Locales"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/productosButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,TextContrastCheck,TouchTargetSizeCheck" />
+
+            <!-- Botón Productos -->
+            <Button
+                android:id="@+id/productosButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:minHeight="48dp"
+                android:text="Productos"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/perfilButton"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/tiendasButton"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ButtonStyle,ContentDescription,HardcodedText,TouchTargetSizeCheck" />
+
+            <!-- Botón Perfil -->
+            <Button
+                android:id="@+id/perfilButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:minHeight="48dp"
+                android:text="Perfil"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/productosButton"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,TextContrastCheck,TouchTargetSizeCheck" />
+
+            <!-- Botón Cerrar Sesion -->
+            <Button
+                android:id="@+id/salirButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:text="Salir"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toEndOf="@id/productosButton"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription,TouchTargetSizeCheck" />
+
+            <!-- ENCABEZADO FIN-->
+
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="393dp"
+            android:layout_height="567dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                tools:ignore="ExtraText">
+
+                <!-- Información de usuario -->
+
+                <TextView
+                    android:id="@+id/textUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="9dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_marginEnd="308dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="Usuario:"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@+id/editUsername"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <!-- Direcciones -->
+
+                <EditText
+                    android:id="@+id/editUsername"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="65dp"
+                    android:hint="Cambiar nombre de usuario"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editUsername3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textUsername" />
+
+                <EditText
+                    android:id="@+id/editRegistroMunicipal"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="81dp"
+                    android:layout_marginBottom="4dp"
+                    android:hint="Cambiar Registro Municipal"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editPhone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editUsername2" />
+
+                <EditText
+                    android:id="@+id/editUsername2"
+                    android:layout_width="301dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginBottom="7dp"
+                    android:hint="cambiar email"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editRun"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editUsername3" />
+
+                <EditText
+                    android:id="@+id/editUsername3"
+                    android:layout_width="301dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_marginEnd="64dp"
+                    android:hint="cambiar contraseña"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/editUsername2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editUsername" />
+
+                <EditText
+                    android:id="@+id/editPhone"
+                    android:layout_width="234dp"
+                    android:layout_height="52dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginEnd="19dp"
+                    android:layout_marginBottom="37dp"
+                    android:hint="cambiar telefono"
+                    android:minHeight="48dp"
+                    app:layout_constraintBottom_toTopOf="@+id/addressContainer"
+                    app:layout_constraintEnd_toStartOf="@+id/btnAddAddress2"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/editRun" />
+
+                <LinearLayout
+                    android:id="@+id/addressContainer"
+                    android:layout_width="345dp"
+                    android:layout_height="167dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_marginTop="26dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_marginBottom="16dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toTopOf="@+id/btnAddAddress"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.6"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnAddAddress2">
+
+                    <!-- Dirección 1 -->
+                    <TextView
+                        android:id="@+id/textAddress1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dirección :"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/editCity1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Ciudad"
+                        android:minHeight="48dp" />
+
+                    <EditText
+                        android:id="@+id/editDistrict1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Comuna"
+                        android:minHeight="48dp" />
+
+                    <!-- Contenedor para las direcciones adicionales -->
+                    <EditText
+                        android:id="@+id/editStreet1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="Dirección"
+                        android:minHeight="48dp" />
+
+                    <!-- Botón para agregar dirección -->
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnAddAddress"
+                    android:layout_width="119dp"
+                    android:layout_height="66dp"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="13dp"
+                    android:layout_marginBottom="32dp"
+                    android:backgroundTint="@color/Azul"
+                    android:text="Agregar dirección"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toTopOf="@+id/addressContainer"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/editPhone"
+                    app:layout_constraintTop_toBottomOf="@+id/editRegistroMunicipal" />
+
+                <Button
+                    android:id="@+id/btnSaveAddress"
+                    android:layout_width="119dp"
+                    android:layout_height="66dp"
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/Azul"
+                    android:text="Guardar dirección"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btnAddAddress"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/addressContainer" />
+
+                <Button
+                    android:id="@+id/btnAddAddress2"
+                    android:layout_width="108dp"
+                    android:layout_height="54dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginEnd="56dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/Azul"
+                    android:text="Actualizar datos"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/btnSaveAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/addressContainer"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:ignore="MissingConstraints" />
+
+                <!-- Otros elementos de la pantalla -->
+                ...
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

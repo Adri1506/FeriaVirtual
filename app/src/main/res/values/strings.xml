@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">FeriaApp</string>
+    <string name="nombre">Nombre</string>
+    <string name="estado">Estado</string>
+    <string name="id">Id</string>
+    <string name="identificacion">Identificacion</string>
+    <string name="registroinstante">RegistroInstante</string>
+    <string name="telefono">Telefono</string>
+    <string name="email">Email</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="slogan_de_la_app">Slogan de la app</string>
+    <string name="lista_de_locales">Lista de Locales</string>
+    <string name="perfil">Perfil</string>
+    <string name="cantidad_producto">Cantidad: %d</string>
+
+</resources>

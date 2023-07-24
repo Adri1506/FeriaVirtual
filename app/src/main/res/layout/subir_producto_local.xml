@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- local_product_upload_screen.xml -->
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck">
+
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="393dp"
+        android:layout_height="145dp"
+        android:layout_marginBottom="110dp"
+        android:background="@color/Rojo"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <!-- Botón de retroceso -->
+
+        <!-- Logo de la aplicación -->
+
+        <!-- Nombre de la aplicación -->
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="67dp"
+            android:layout_height="62dp"
+            android:background="@drawable/back_icon"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="24dp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="99dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/appName"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="116dp"
+            android:layout_height="28dp"
+            android:baselineAligned="false"
+            android:text="Feria Virtual"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,TextSizeCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/appName2"
+        android:layout_width="328dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="174dp"
+        android:layout_marginBottom="4dp"
+        android:baselineAligned="false"
+        android:text="Carga tus productos aqui"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="@+id/headerLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2"
+        tools:ignore="HardcodedText,MissingConstraints" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="387dp"
+        android:layout_height="294dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="284dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/footerLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName2"
+        tools:ignore="MissingConstraints">
+
+        <!-- Campo de entrada para el nombre del producto -->
+        <EditText
+            android:id="@+id/edit_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del producto"
+            android:importantForAutofill="no"
+
+            android:minHeight="48dp"
+            tools:ignore="HardcodedText,TextFields" />
+
+        <EditText
+            android:id="@+id/edit_product_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="id producto"
+            android:importantForAutofill="no"
+
+            android:minHeight="48dp"
+            tools:ignore="HardcodedText,TextFields" />
+
+
+        <!-- Campo de entrada para el precio del producto -->
+        <EditText
+            android:id="@+id/edit_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio del producto"
+            android:minHeight="48dp"
+
+            tools:ignore="Autofill,HardcodedText,TextFields" />
+
+        <!-- Campo de entrada para la cantidad disponible del producto -->
+
+        <!-- Botón para cargar el producto -->
+
+        <Button
+            android:id="@+id/btn_upload_product"
+            android:layout_width="360dp"
+            android:layout_height="38dp"
+            android:layout_marginTop="60sp"
+            android:background="@color/Azul"
+            android:minHeight="48dp"
+            android:text="Cargar producto"
+            android:textColor="@color/white"
+            tools:ignore="HardcodedText,VisualLintButtonSize,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="237dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints">
+
+        <ListView
+            android:id="@+id/list_productos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </ListView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/footerLayout"
+        android:layout_width="393dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="743dp"
+        android:background="@color/Rojo"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2"
+        tools:ignore="VisualLintBounds">
+
+        <!-- Logo del footer -->
+        <ImageView
+            android:id="@+id/footerLogo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <!-- Otros elementos del footer -->
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".BoletaActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="379dp"
+        android:layout_height="132dp"
+        android:background="@color/Verde"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/nombreText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <!-- Botón de retroceso -->
+
+        <!-- Logo de la aplicación -->
+
+        <!-- Nombre de la aplicación -->
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="67dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/back_icon"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="99dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/appName"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="116dp"
+            android:layout_height="28dp"
+            android:layout_marginTop="57dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="31dp"
+            android:baselineAligned="false"
+            android:text="Feria Virtual"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Otras vistas del encabezado -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBoleta"
+        android:layout_width="339dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/saleBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title3" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewBoletaInfo"
+        android:layout_width="325dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="1dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/title2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+    <Button
+        android:id="@+id/saleBtn"
+        android:layout_width="340dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="23dp"
+        android:backgroundTint="@color/Azul"
+        android:text="Finalizar Compra"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewBoleta" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="93dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="129dp"
+        android:text="Total : "
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/title3"
+        app:layout_constraintEnd_toStartOf="@+id/precioTotal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewBoletaInfo" />
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="245dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginEnd="114dp"
+        android:layout_marginBottom="1dp"
+        android:text="Productos Seleccionados"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewBoletaInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/telefonoText" />
+
+    <TextView
+        android:id="@+id/nombreText"
+        android:layout_width="327dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="31dp"
+        android:text="nombre"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/telefonoText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout" />
+
+    <TextView
+        android:id="@+id/telefonoText"
+        android:layout_width="320dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="38dp"
+        android:text="telefono"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/title1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nombreText" />
+
+    <TextView
+        android:id="@+id/precioTotal"
+        android:layout_width="128dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="35dp"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewBoleta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/title3"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerViewBoletaInfo" />
+
+    <TextView
+        android:id="@+id/title3"
+        android:layout_width="190dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="34dp"
+        android:text="Elije tu direccion"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewBoleta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="228dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Productos                                      KG"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerViewBoletaInfo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title1" />
+</androidx.constraintlayout.widget.ConstraintLayout>

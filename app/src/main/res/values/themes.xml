@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme.FeriaApp" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="AppTheme.CargaProductoActivity" parent="Theme.AppCompat.Light">
+
+        <!-- Otros atributos y estilos específicos de tu actividad -->
+    </style>
+
+
+</resources>

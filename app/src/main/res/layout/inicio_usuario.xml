@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Barra superior -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="393dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/Verde"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/searchLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <!-- Botón de retroceso -->
+
+        <!-- Logo de la aplicación -->
+
+        <!-- Nombre de la aplicación -->
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="67dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/back_icon"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="99dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="29dp"
+            android:layout_marginEnd="19dp"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/appName"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="116dp"
+            android:layout_height="28dp"
+            android:layout_marginStart="-40dp"
+            android:layout_marginTop="56dp"
+            android:layout_marginEnd="33dp"
+            android:layout_marginBottom="45dp"
+            android:baselineAligned="false"
+            android:text="Feria Virtual"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Otras vistas del encabezado -->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Contenido de la pantalla -->
+
+    <!-- Barra de búsqueda -->
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="382dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/Verde"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/menuLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/headerLayout">
+
+
+        <EditText
+            android:id="@+id/searchEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:hint="Buscar locales y productos"
+            android:minHeight="48dp"
+            android:padding="8dp"
+            android:textColor="@color/white"
+            tools:ignore="Autofill,TextFields,VisualLintTextFieldSize" />
+
+        <ImageButton
+            android:id="@+id/searchButton"
+            android:layout_width="52dp"
+            android:layout_height="49dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/search_icon"
+            tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <!-- Menú horizontal -->
+
+    <!-- Lista horizontal de tarjetas con locales -->
+
+    <!-- Parrilla de productos más vendidos -->
+
+
+    <LinearLayout
+        android:id="@+id/menuLayout"
+        android:layout_width="384dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginBottom="4dp"
+        android:background="@color/Verde"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchLayout"
+        tools:ignore="UnknownId">
+
+        <!-- Botones del menú -->
+        <!-- Botón Locales -->
+        <Button
+            android:id="@+id/tiendasButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@android:color/transparent"
+            android:minHeight="48dp"
+            android:text="Mis Compras"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/productosButton"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,TextContrastCheck,TouchTargetSizeCheck" />
+
+        <!-- Botón Productos -->
+        <Button
+            android:id="@+id/productosButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:minHeight="48dp"
+            android:text="Carrito"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/perfilButton"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/tiendasButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ButtonStyle,ContentDescription,HardcodedText,TouchTargetSizeCheck" />
+
+        <!-- Botón Perfil -->
+
+
+        <Button
+            android:id="@+id/perfilButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:minHeight="48dp"
+            android:text="@string/perfil"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/productosButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,TextContrastCheck,TouchTargetSizeCheck" />
+        <!-- Botón Cerrar Sesion -->
+        <Button
+            android:id="@+id/salirButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:text="Salir"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@id/productosButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <!-- /////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <!--////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="375dp"
+        android:layout_height="540dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menuLayout">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <LinearLayout
+                android:id="@+id/Titulo"
+                android:layout_width="393dp"
+                android:layout_height="68dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints">
+
+                <EditText
+                    android:id="@+id/subtitulo"
+                    android:layout_width="369dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="20dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:hint="Tus Locales preferidos estan aqui"
+                    android:minHeight="48dp"
+                    android:padding="8dp"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:visibility="visible"
+                    tools:ignore="VisualLintTextFieldSize,TouchTargetSizeCheck">
+
+                </EditText>
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="296dp"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Titulo" />
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="382dp"
+                android:layout_height="392dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Titulo"
+                tools:ignore="MissingConstraints,VisualLintBounds">
+
+
+                <TextView
+                    android:id="@+id/subtitulo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp"
+                    android:background="@color/white"
+                    android:baselineAligned="false"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:rotationX="2"
+                    android:text="Productos Disponibles"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewProductos"
+                    android:layout_width="358dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.08"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Verde">
+
+    <!-- Logo de la app -->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="137dp"
+        android:layout_height="100dp"
+        android:contentDescription="TODO"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3"
+        tools:ignore="ContentDescription,HardcodedText" />
+
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="314dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="273dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="182dp"
+        android:text="Iniciar Sesión"
+        android:textColor="#00100D"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="HardcodedText,TextSizeCheck" />
+
+    <!-- Campo de Contraseña -->
+
+    <!-- Botón Iniciar Sesión -->
+
+    <!-- Texto "¿Olvidaste tu contraseña?" -->
+
+    <TextView
+        android:id="@+id/nameApp"
+        android:layout_width="55dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="179dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginBottom="12dp"
+        android:text="Feria Virtual"
+        android:textColor="#0A0E0E"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/sloganTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+        tools:ignore="HardcodedText,SmallSp,TextSizeCheck" />
+
+    <TextView
+        android:id="@+id/sloganTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="61dp"
+        android:text="Fruta fresca y en tu hogar"
+        android:textColor="#212121"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameApp"
+        tools:ignore="HardcodedText,VisualLintOverlap" />
+
+    <EditText
+        android:id="@+id/nombreEditText"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="275dp"
+        android:hint="Nombre de usuario"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:textColorHint="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="Autofill,DuplicateClickableBoundsCheck,HardcodedText,TextContrastCheck" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="377dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="215dp"
+        android:autofillHints=""
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
+        android:textColorHint="#212121"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="482dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="110dp"
+        android:backgroundTint="#0000FF"
+        android:text="Iniciar Sesión"
+        android:textColor="#B0BEC5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateClickableBoundsCheck,DuplicateSpeakableTextCheck,HardcodedText,VisualLintButtonSize" />
+
+    <!-- Botón Registrarse -->
+
+    <Button
+        android:id="@+id/forgotPasswordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="439dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="182dp"
+        android:backgroundTint="@color/Verde"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:id="@+id/registerButton"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="555dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="37dp"
+        android:backgroundTint="#0000FF"
+        android:text="Registrarse"
+        android:textColor="#B0BEC5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="HardcodedText,VisualLintButtonSize" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

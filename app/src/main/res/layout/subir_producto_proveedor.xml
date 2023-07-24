@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- provider_product_upload_screen.xml -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="393dp"
+        android:layout_height="145dp"
+        android:layout_marginBottom="71dp"
+        android:background="@color/morado"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="VisualLintBounds">
+
+        <!-- Botón de retroceso -->
+
+        <!-- Logo de la aplicación -->
+
+        <!-- Nombre de la aplicación -->
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="67dp"
+            android:layout_height="62dp"
+            android:background="@drawable/back_icon"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="5dp"
+            tools:layout_editor_absoluteY="24dp" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="99dp"
+            android:layout_height="80dp"
+            android:padding="10dp"
+            android:src="@drawable/logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/appName"
+            app:layout_constraintStart_toEndOf="@+id/backButton"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            tools:layout_editor_absoluteX="83dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:id="@+id/appName"
+            android:layout_width="116dp"
+            android:layout_height="28dp"
+            android:baselineAligned="false"
+            android:text="Feria Virtual"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/logo"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="182dp"
+            tools:layout_editor_absoluteY="42dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/appName2"
+        android:layout_width="379dp"
+        android:layout_height="41dp"
+        android:baselineAligned="false"
+        android:text="Carga tus ofertas aqui"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/appName"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.199"
+        tools:ignore="NotSibling" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="391dp"
+        android:layout_height="635dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="216dp">
+
+        <!-- Campo de entrada para el nombre del producto -->
+        <EditText
+            android:id="@+id/edit_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre del producto"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Campo de entrada para la descripción del producto -->
+        <EditText
+            android:id="@+id/edit_product_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripción del producto"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Campo de entrada para el precio del producto -->
+        <EditText
+            android:id="@+id/edit_product_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio del producto"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Campo de entrada para la cantidad disponible del producto -->
+        <EditText
+            android:id="@+id/edit_product_quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Cantidad disponible"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Campo de entrada para la fecha de cosecha -->
+        <EditText
+            android:id="@+id/edit_harvest_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha de oferta"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <!-- Botón para cargar el producto -->
+        <Button
+            android:id="@+id/btn_upload_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/Azul"
+            android:text="Cargar oferta"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

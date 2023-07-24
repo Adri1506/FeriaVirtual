@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Verde"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <!-- Logo -->
+
+    <!-- banner -->
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="72dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="4dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <!-- Título -->
+
+    <!-- Campos comunes a todos los roles -->
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="149dp"
+        android:layout_height="30dp"
+        android:paddingBottom="16dp"
+        android:text="Registro de Usuario"
+        android:textColor="#212121"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText,MissingConstraints,TextSizeCheck"
+        tools:layout_editor_absoluteX="88dp"
+        tools:layout_editor_absoluteY="20dp" />
+
+    <Spinner
+        android:id="@+id/roleSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Selecciona rol"
+        android:minHeight="48dp"
+        tools:ignore="HardcodedText" />
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/nombre"
+        android:inputType=""
+        android:minHeight="48dp"
+        tools:ignore="Autofill,VisualLintTextFieldSize" />
+
+
+    <EditText
+        android:id="@+id/editTextidentification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/identificacion"
+        android:minHeight="48dp"
+        tools:ignore="Autofill,TextFields,VisualLintTextFieldSize" />
+
+
+    <!-- Spinner para seleccionar el rol -->
+
+    <!-- Campos específicos de cada rol -->
+
+    <EditText
+        android:id="@+id/editTextTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:hint="@string/telefono"
+        android:minHeight="48dp"
+        tools:ignore="Autofill,TextFields,VisualLintTextFieldSize" />
+
+    <EditText
+        android:id="@+id/EmaileditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:minHeight="48dp"
+        tools:ignore="Autofill,TextFields,VisualLintTextFieldSize" />
+
+    <!-- Para el proveedor -->
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="contraseña"
+        android:minHeight="48dp"
+        tools:ignore="Autofill,HardcodedText,TextFields,VisualLintTextFieldSize" />
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="214dp"
+            android:backgroundTint="@color/Azul"
+            android:text="Registrarse"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="204dp"
+            android:layout_marginEnd="31dp"
+            android:backgroundTint="@color/Azul"
+            android:text="ir a login"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="HardcodedText,MissingConstraints" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>
